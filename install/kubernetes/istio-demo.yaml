@@ -15673,6 +15673,9 @@ metadata:
     istio: galley
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: galley
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -15801,6 +15804,9 @@ metadata:
     app: istio-egressgateway
     istio: egressgateway
 spec:
+  selector:
+    matchLabels:
+      app: istio-egressgateway
   template:
     metadata:
       labels:
@@ -15960,6 +15966,9 @@ metadata:
     app: istio-ingressgateway
     istio: ingressgateway
 spec:
+  selector:
+    matchLabels:
+      app: istio-ingressgateway
   template:
     metadata:
       labels:
@@ -16128,6 +16137,9 @@ metadata:
     release: istio
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: grafana
   template:
     metadata:
       labels:
@@ -17024,6 +17036,9 @@ metadata:
     istio: citadel
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: security
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -17106,6 +17121,9 @@ metadata:
     istio: sidecar-injector
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: sidecarInjectorWebhook
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -17229,6 +17247,9 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
+  selector:
+    matchLabels:
+      app: jaeger
   template:
     metadata:
       labels:
